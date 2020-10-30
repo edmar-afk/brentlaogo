@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Programming 1</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-chalkboard-teacher fa-2x"></i></div>
+                <h1 class="text-center">IT102</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            Lessons
+                        </a></li>
+                    <li class="tm-nav-item"><a href="overview.html" class="tm-nav-link">
+                            <i class="fas fa-book-open"></i>
+                            Overview
+                        </a></li>
+                </ul>
+            </nav>
+
+            <p class="tm-mb-80 pr-5 text-white">
+                This course covers the use of general purpose programming language to solve problems. The emphasis is to
+                train the students to design,
+                implement, and test and debug programs intended to solve computing problems using fundamental
+                programming constructs.
+                This will be introduces to students with no previous programming experience on how to plan and create
+                well-structured programs using
+                procedural programming paradigms.. </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/programming1.png" width="100%" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">while loop, do-while loop, for loop,
+                            nested
+                            loops</h2>
+                        <p>source <a href="https://codescracker.com/cpp/cpp-iteration-statements.htm">codescracker</a>
+                        </p>
+                        <p class="tm-pt-30">
+                            <p>
+                                The iteration (for, while, and do-while loop) statements allows a set of instruction to
+                                be performed repeatedly until a certain condition is fulfilled. The iteration statements
+                                are also called loops or looping statements. C++ provides three kinds of loops :<br><br>
+
+                                • for loop<br>
+                                • while loop<br>
+                                • do-while loop
+                                <br><br>
+
+                                All three loop constructs of C++ repeat a set of statements as long as a specified
+                                condition remains true. This specified condition is generally referred to as a loop
+                                control. For all three loop statements, a true condition is any nonzero value. A zero
+                                value indicates a false condition.<br><br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Loop parts</h2>
+                                <p>Every loops has its elements that control and govern its execution. Generally, a loop
+                                    has four elements that have different purposes. These elements are as :<br><br>
+                                    • iInitialization Expression(s)<br>
+                                    • Test Expression<br>
+                                    • Update Expression(s)<br>
+                                    • Loop's Body<br><Br>
+                                    Let's discuss these parts of a loop one by one
+                                </p><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Initialization Expression(s)
+                                </h2>
+                                <p>Before entering in a loop, its control variable(s) must be initialized. The
+                                    initialization of the control variable(s) takes place under initialization
+                                    expression(s). The initialization expression(s) give(s) the loop variable(s) their
+                                    first value(s). The initialization expression(s) is executed only once, in the
+                                    beginning of the loop.</p><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Test Expression</h2>
+                                <p>The test expression is an expression whose truth value decides whether the loop-body
+                                    will be executed or not. If the test expression evaluates to true i.e., 1, the
+                                    loop-body gets executed, otherwise the loop is terminated.</p>
+                                <p>In an entry-controlled loop, the test-expression is evaluated before exiting from the
+                                    loop. In C++, the for loop and while loop are entry-controlled loops and do-while
+                                    loop is exit-controlled loop.</p><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Update Expression(s)</h2>
+                                <p>The update expression(s) change the value(s) of loop variable(s). The update
+                                    expression(s) is executed; at the end of the loop after the loop-body is executed.
+                                </p><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Loop's Body</h2>
+                                <p>The statements that are executed repeatedly (as long as the test-expression is
+                                    nonzero) from the body of the loop. In an entry-controlled loop, first
+                                    test-expression is evaluated and if it is nonzero, the body-of-the-loop is executed;
+                                    if the test-expression evaluates to be zero, the loop is terminated. In an
+                                    exit-controlled loop, the body-of-the-loop is executed first and then the
+                                    test-expression is evaluated. If it evaluates to be zero, the loop is terminated
+                                    otherwise repeated. Now let's discuss the C++ loops: for, while and do-while.</p>
+                                <br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ for Loop</h2>
+                                <p>The for loop is the easiest to understand of the C++ loops. All its loop-control
+                                    elements are gathered in one place (on the top of the loop), while in the other loop
+                                    construction of C++, they (top-control elements) are scattered about the program.
+                                </p>
+                                <br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ for Loop Syntax</h2>
+                                <p>The general form (syntax) of the for loop statement is :</p>
+                                <textarea cols="2" rows="5">
+for(initialization expression(s); test-expression; update expression(s))
+{
+	body-of-the-loop ;
+}
+</textarea>
+                                <br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ for Loop Example</h2>
+                                <p>The following example program illustrates the use of for statement :</p>
+                                <textarea cols="2" rows="15">
+/* C++ Iteration Statements - C++ for Loop */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int i;
+	for(i=1; i<=10; i++)
+	{
+		cout<<i<<" ";
+	}
+	getch();
+}
+</textarea>
+                                <p>When the above program is compile and executed, it will produce the following output:
+                                </p>
+                                <img src="img/9.jpg" alt="" width="70%" draggable="false"><br><br>
+                                <p>The following lines explain the working of the above given for loop program :
+                                    <br><br>
+
+                                    • Firstly, initialization expression is executed, i.e., i=1 which gives the first
+                                    value 1 to variable i.<br>
+                                    • Then, the test expression is evaluated i.e., i <= 10 which results into true i.e.,
+                                        1.<br>
+                                        • Since, the test expression is true, the body-of-the-loop i.e., cout << i
+                                            << " " ; is executed which prints the current value of i then a single
+                                            space.<br>
+                                            • After executing the loop-body, the update expression i.e., i++ is executed
+                                            which
+                                            increments the value of i. (After first execution of the loop, the value of
+                                            i becomes
+                                            2 after the execution of i++, since initially i was 1).<br>
+                                            • AFter the update expression is executed, the test-expression is again
+                                            evaluated. If it is true the sequence is repeated from the step no 3,
+                                            otherwise the loop terminates.<br><Br>
+                                            <b>Note </b>- Use for loop when you have to repeat a block of statements
+                                            specific number of times.
+                                </p>
+                                <br><br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ Infinite Loop</h2>
+                                <p>Although any loop statement can be used to create an infinite loop (endless loop) yet
+                                    for is traditionally used for this purpose. An infinite for loop can be created by
+                                    omitting the test-expression as shown below :</p>
+                                <textarea cols="2" rows="4">
+    for(i=25; ; i--)
+    {
+        cout << "This loop runs forever..!!" ;
+    }
+</textarea>
+                                <p>Similarly, the following for loop is also an infinite loop :</p>
+                                <textarea cols="2" rows="4">
+    for( ; ; )
+{
+	cout << "I will not stop..!!" ;
+}
+</textarea>
+                                <p>Here is an example of infinite loop in C++</p>
+                                <textarea cols="2" rows="10">
+    /* C++ Loops - C++ Infinite Loop */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	for( ; ; )
+	{
+		cout<<"This loop will run forever..!!";
+	}
+	getch();
+}
+</textarea>
+                                <p>When the conditional expression is absent, it is assumed to be true. You may have an
+                                    initialization and increment expression, but C++ programmers more commonly use the
+                                    for(;;) construct to signify an infinite loop. If you try to run the above C++
+                                    program, then the output window will come out like this, printing continuously</p>
+
+                                <img src="img/9.1.jpg" alt="" width="70%" draggable="false"><br><br>
+
+                                <p><b>Note </b>- You can terminate an infinite loop by pressing Ctrl+C keys. Let's take
+                                    another program, prints stars infinite times</p>
+                                <textarea cols="2" rows="10">
+/* C++ Loops - C++ Infinite Loop */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	for(;;)
+	{
+		cout<<"*  ";
+	}
+	getch();
+}
+</textarea>
+                                <p>After running this C++ program, output window will look like this, printing stars
+                                    infinite times:</p>
+                                <img src="img/9.2.jpg" alt="" width="70%" draggable="false"><br><br>
+                                <br><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ Empty Loop</h2>
+                                <p>If a loop does not contain any statement in its loop-body, it is said to be an empty
+                                    loop. In such cases, a C++ loop contains an empty statement i.e., a null statement.
+                                    Following for loop is an empty loop:</p>
+                                <textarea cols="2" rows="1">
+    for(i=20; (i); i--) ;
+</textarea>
+                                <p>See, the body of the above for loop contains just (a null statement). It is an empty
+                                    loop. An empty for loop has its applications in pointer manipulations where you need
+                                    to increment or decrement pointer position without doing anything else.<br><br>
+
+                                    Time delay loops are often used in programs. The following code shows how to create
+                                    one by using for :
+                                </p>
+                                <textarea cols="2" rows="1">
+    for(t = 0; t < 3000; t++) ;
+</textarea>
+                                <p>That means if you put a semicolon after for's parenthesis it repeats only for
+                                    counting the control variable. And if put a block of statements after such a loop,
+                                    then it is not part of for loop. For example, consider the following :</p>
+                                <textarea cols="2" rows="5">
+    for(i=0; i<10; i++) ;
+{
+	cout << "i = " << i << endl;
+}
+</textarea>
+                                <p>The semicolon after the for loop ends the loop there only. And then, the below i.e,
+                                    is not body of the for loop.</p>
+                                <br><br>
+
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ while Loop</h2>
+                                <p>The second loop available in C++ is the while loop. The while loop is an
+                                    empty-controlled loop.</p>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ while Loop Syntax</h2>
+                                <p>Following is the syntax of the while loop :</p>
+                                <textarea cols="2" rows="5">
+while(expression)
+{
+	loop-body ;
+}
+</textarea>
+                                <p>where the loop-body may contain a single statement, a compound statement or an empty
+                                    statement. The loop iterates while the expression evaluates to true. When the
+                                    expression becomes false, the program control passes to the line after the loop-body
+                                    code.<br><br>
+
+                                    In a while loop, a loop control variable should be initialized before the loop
+                                    begins as an uninitialized variable can be used in the expression. The loop variable
+                                    should be updated inside the body-of-the-while.
+                                </p><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ while Loop Example</h2>
+                                <p>Following example program illustrates the working of a while loop :</p>
+                                <textarea cols="2" rows="15">
+/* C++ Iteration Statements - C++ while Loop */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	unsigned long num, fact=1;
+	cout<<"Enter a number: ";
+	cin>>num;
+	while(num)
+	{
+		fact = fact*num;
+		num--;
+	}
+	cout<<"The factorial of the number is "<<fact;
+	getch();
+}
+</textarea>
+                                <p>When the above program compile and executed, it will produce the following output:
+                                </p>
+                                <img src="img/9.3.jpg" alt="" width="70%" draggable="false"><br><br>
+                                <p>The above program inputs an integer num. Then as long as num is nonzero (according to
+                                    while (num)) the loop-body iterates i.e., fact is multiplied with num and the result
+                                    is stored back in fact, followed by the decrement of num. Again the test-expression
+                                    (num) is evaluated : if it is true, the loop repeated otherwise terminated.</p>
+                                <br>
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ do-while Loop</h2>
+                                <p>Unlike the for and while loops, the do-while is an exit-controlled loop i.e., it
+                                    evaluates its test-expression at the bottom of the loop after executing its
+                                    loop-body statements. This means that a do-while loop always executes at least once.
+                                    <br><br>
+
+                                    In the other two loops for and while, the test-expression is evaluated at the
+                                    beginning of the loop i.e., before executing the loop-body. If the test-expression
+                                    evaluates to false for the first time itself, the loop is never executed. But in
+                                    some situations, it is wanted that the loop-body is executed at least once, no
+                                    matter what the initial state of the test-expression is. In such cases, the do-while
+                                    loop is the obvious choice.<br>
+                                </p>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ do-while Loop Syntax
+                                </h2>
+
+                                <p>The syntax of the do-while loop is:</p>
+                                <textarea cols="2" rows="5">
+do
+{
+	statement ;
+}while(test-expression);
+</textarea>
+                                <p>The braces { } are not necessary when the loop-body contains a single statement. The
+                                    following do-while loop prints all upper-case letters :</p>
+                                <textarea cols="2" rows="7">
+char ch = 'A' ;
+do
+{
+	cout << "\n" << ch ;
+	ch++;
+}while(ch <= 'Z');
+</textarea>
+                                <p>The above code prints characters from 'A' onwards until the condition ch <= 'Z'
+                                        becomes false.</p> <br>
+                                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++
+                                            do-while Loop Example
+                                        </h2>
+                                        <p>The most common use of the do-while loop is in menu selection routine, where
+                                            the menu is flashed at least once. Then depending upon the user's response
+                                            it is either repeated or terminated.<br><br>
+
+                                            The following example program is a menu selection program. Following program
+                                            display a menu regarding rectangle operations and perform according to the
+                                            user's response :
+                                        </p>
+                                        <textarea cols="2" rows="15">
+/* C++ Iteration Statements - C++ do-while Loop */
+
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+#include<process.h>
+void main()
+{
+	clrscr();
+	char ch, ch1;
+	float l, b, peri, area, diag;
+	cout<<"Rectangle Menu";
+	cout<<"\n 1. Area";
+	cout<<"\n 2. Perimeter";
+	cout<<"\n 3. Diagonal";
+	cout<<"\n 4. Exit\n";
+	cout<<"\nEnter your choice: ";
+	do
+	{
+		cin>>ch;
+		if(ch == '1' || ch == '2' || ch == '3')
+		{
+			cout<<"Enter length & breadth: ";
+			cin>>l>>b;
+		}
+		switch(ch)
+		{
+			case '1' : area = l * b ;
+				cout<<"Area = "<<area;
+				break ;
+			case '2' : peri = 2 * (l + b);
+				cout<<"Perimeter = "<<peri;
+				break;
+			case '3' : diag = sqrt((l * l) + (b * b));
+				cout<<"Diagonal = "<<diag;
+				break;
+			case '4' : cout<<"Breaking..Press a key..";
+				getch();
+				exit(1);
+			default : cout<<"Wrong choice !!!!";
+				cout<<"\nEnter a valid one";
+				break;
+		}     //end of switch
+		cout<<"\nWant to enter more (y/n) ? ";
+		cin>>ch1;
+		if(ch1 == 'y' || ch1 == 'Y')
+		cout<<"Again enter choice (1-4): ";
+	}while(ch1 == 'y' || ch1 == 'Y') ;      //end of DO-WHILE loop
+	getch();
+}
+</textarea>
+
+                                        <p>When the above program is compile and executed, it will produce the following
+                                            output:</p>
+                                        <img src="img/9.4.jpg" alt="" width="70%" draggable="false"><br><br>    
+                                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ Nested Loops
+                                        </h2>
+                                        <p>A loop may contain another loop in its body. This form of a loop is called
+                                            nested loop. But in a nested loop, the inner loop must terminate before the
+                                            outer loop. The following is an example of a nested loop.</p>
+<textarea cols="2" rows="15">
+    /* C++ Iteration Statements - C++ Nested Loops */
+
+    #include<iostream.h>
+    #include<conio.h>
+    void main()
+    {
+        clrscr();
+        int i, j;
+        for(i=0; i<15; i++)
+        {
+            for(j=0; j<=i; j++)
+            {
+                cout<<"* ";
+            }
+            cout<<"\n";
+        }
+        getch();
+    }
+</textarea>
+
+                                            <p>When the above program is compile and executed it will produce the following output:</p>
+                                            <img src="img/9.5.jpg" alt="" width="70%" draggable="false"><br><br>
+                                            <p>Here is one more program, demonstrating nested loop in C++</p>
+<textarea cols="2" rows="15">
+/* C++ Loops Program */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int num, temp, i, j;
+	cout<<"Enter a number: ";
+	cin>>num;
+	for(i=0; i<10; i++)
+	{
+		num++;
+		temp=num;
+		for(j=0; j<=i; j++)
+		{
+			cout<<num<<" ";
+			num++;
+		}
+		cout<<"\n";
+		num=temp;
+	}
+	getch();
+}
+</textarea>
+                                            <p>Below is the sample run of the above C++ program:</p>
+                                            <img src="img/9.6.jpg" alt="" width="70%" draggable="false">
+
+
+
+
+
+
+
+
+                                </p>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js">
+    </script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>

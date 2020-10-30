@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Programming 1</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-chalkboard-teacher fa-2x"></i></div>
+                <h1 class="text-center">IT102</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            Lessons
+                        </a></li>
+                    <li class="tm-nav-item"><a href="overview.html" class="tm-nav-link">
+                            <i class="fas fa-book-open"></i>
+                            Overview
+                        </a></li>
+                </ul>
+            </nav>
+
+            <p class="tm-mb-80 pr-5 text-white">
+                This course covers the use of general purpose programming language to solve problems. The emphasis is to
+                train the students to design,
+                implement, and test and debug programs intended to solve computing problems using fundamental
+                programming constructs.
+                This will be introduces to students with no previous programming experience on how to plan and create
+                well-structured programs using
+                procedural programming paradigms.. </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/programming1.png" width="100%" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">if, nested ifs, if-else, if-else-if and
+                            switch statement</h2>
+                        <p>Source: <a href="https://codescracker.com/cpp/cpp-selection-statements.htm">codescracker</a>
+                        </p>
+                        <p class="tm-pt-30">
+                            <p>
+                                The selection (if, if-else, if-else-if, and switch) statements allows to choose the
+                                set-of-instructions for execution depending upon an expression's truth value. C++
+                                provides following two types of selection statements:<br><br>
+
+                                • if statement<br>
+                                • switch statement
+                                <br><br>
+
+                                In addition, in certain circumstances ? operator can be used as an alternative to if
+                                statement. The selection statements are also called conditional statements or decision
+                                statements (as already discussed in the previous tutorial). We will learn about
+                                selection statements of C++ in detail, divided into these parts:<br><br>
+
+                                • if statement<br>
+                                • if-else statement<br>
+                                • nested ifs statement<br>
+                                • switch statement<br>
+                                • nested switch statement<br><br><br>
+                            </p>
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ if Statement</h2>
+                            <p>An if statement tests a particular condition; if the condition evaluates to true, a
+                                course-of-action is followed i.e., a statement or set-of-statements is executed.
+                                Otherwise (if the condition evaluates to false), the course-of-action is ignored. Here
+                                is the syntax or general form of the if statement:</p>
+
+                            <textarea cols="2" rows="4">
+if(expression)
+{
+	statement(s);
+}
+</textarea>
+                            <p>Here, statement may be a single statement or a block of statements, or nothing (in case
+                                of empty statement). The expression must be enclosed in parentheses. If the expression
+                                evaluates to true i.e., a nonzero value, the statement is executed, otherwise ignored.
+                                For example, the following code fragment :</p>
+                            <textarea cols="2" rows="4">
+if(ch == ' ')
+{
+	spaces++;
+}
+</textarea>
+                            <p>Checks whether the character variable ch stores a space or not; if it does, the number of
+                                spaces are incremented by 1. Consider another example illustrating the use of if
+                                statement :</p>
+
+                            <textarea cols="2" rows="10">
+char ch;
+cin >> ch;
+if(ch == ' ')
+{
+	cout << "You entered a space" << "\n" ;
+}
+if(ch >= '0' && ch <= '9')
+{
+	cout << "You entered a digit" << "\n";
+}
+</textarea>
+                            <p>The above example reads a character. If the character input is a space, if flashes a
+                                message specifying it. If the character input is a digit, it flashes a message
+                                specifying it. Let's take an example demonstrating the if statement of C++ practically.
+                            </p>
+
+                            <textarea cols="2" rows="16">
+/* C++ Selection Statements - C++ if Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	char ch;
+	cout<<"Enter a character: ";
+	cin>>ch;
+	if(ch>='0' && ch<='9')
+	{
+		cout<<"You entered a digit.";
+	}
+	getch();
+}
+</textarea>
+                            <p>Here is the sample run of the above C++ program:</p>
+                            <img src="img/lesson8.jpg" alt="" width="70%" draggable="false"><br>
+                            <p>Let's take another example, also demonstrating the if statement of C++</p>
+
+                            <textarea cols="2" rows="16">
+/* C++ Selection Statements - C++ if Statement */
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int num;
+	cout<<"Enter a number: ";
+	cin>>num;
+	if(num%2==0)
+	{
+		cout<<"You entered an even number";
+	}
+	getch();
+}
+</textarea>
+                            <p>Here is the sample run of this C++ program:</p>
+                            <img src="img/lesson8.1.jpg" alt="" width="70%" draggable="false"><br>
+                            <p>Following example programs also illustrates the syntax and working of the if statement :
+                            </p>
+
+                            <textarea cols="2" rows="16">
+/* C++ Selection Statements - C++ if Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int x, y, z, max;
+	cout<<"Enter any three numbers: ";
+	cin>>x>>y>>z;
+	max = x;
+	if(y>max)
+	{
+		max = y;
+	}
+	if(z>max)
+	{
+		max = z;
+	}
+	cout<<"\n"<<"The largest of "<<x<<", "<<y<<" and "<<z<<" is "<<max;
+	getch();
+}
+</textarea>
+                            <p>When the above C++ program is compile and executed, it will produce the following output.
+                                This is the output, if 3rd number is biggest.</p>
+                            <img src="img/lesson8.2.jpg" alt="" width="70%" draggable="false">
+                            <p>Here is another output, if 2nd number is biggest.</p>
+                            <img src="img/lesson8.3.jpg" alt="" width="70%" draggable="false">
+                            <p>Now, here is the last output, if 1st number is biggest:</p>
+                            <img src="img/lesson8.4.jpg" alt="" width="70%" draggable="false"><br><Br><br><br><br>
+
+
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ if-else Statement</h2>
+                            <p>The examples of if statement, you have seen so far allow you to execute a set of
+                                statements if a condition or expression evaluates to true. What if there is another
+                                course of action to be followed if the expression evaluates to false ?<br><br>
+
+                                There is another form of if that allows for this kind of either-or condition by
+                                providing an else clause. The syntax of the if-else statement is the following :
+                            </p>
+                            <textarea cols="2" rows="8">
+if(expression)
+{
+	statement 1;
+}
+else
+{
+	statement 2;
+}
+</textarea>
+                            <p>If the expression evaluates to true i.e., a nonzero value, the statement 1 is executed,
+                                otherwise, statement 2 is executed. The statement 1 and statement 2 can be a single
+                                statement, or a compound statement, or a null statement.</p>
+                            <p><b>Note</b> - Remember, in an if-else statement, only the code associated with if (i.e.,
+                                statement 1) or the code associated with else (i.e., statement 2) executes, never
+                                both.<br><br>
+                                Let's take an example program, demonstrating the if-else statement of C++, practically.
+                            </p>
+                            <textarea cols="2" rows="16">
+/* C++ Selection Statements - C++ if-else Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int num;
+	cout<<"Enter a number: ";
+	cin>>num;
+	if(num%2==0)
+	{
+		cout<<"You entered an even number";
+	}
+	else
+	{
+		cout<<"You entered an odd number";
+	}
+	getch();
+}
+</textarea>
+                            <p>Below are the two sample run of the above C++ program:</p>
+                            <img src="img/lesson8.5.jpg" alt="" width="70%" draggable="false"><br><br>
+                            <img src="img/lesson8.6.jpg" alt="" width="70%" draggable="false"><br><br>
+                            <p>Here is another program, also illustrating the use of if-else statement in a C++ program:
+                            </p>
+                            <textarea cols="2" rows="16">
+/* C++ Selection Statements - C++ if-else Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int x, y ;
+	cout<<"Enter two numbers: ";
+	cin>>x>>y;
+	if(x>y)
+	{
+		cout<<x<<" is largest";
+	}
+	else
+	{
+		cout<<y<<" is largest";
+	}
+	getch();
+}
+</textarea>
+                            <p>When the above C++ program is compile and executed, it will produce the following output:
+                            </p>
+                            <img src="img/lesson8.7.jpg" alt="" width="70%" draggable="false"><br><br>
+                            <p><b>Important</b> - Placement of semicolon is also important. In an if statement, DO NOT
+                                put
+                                semicolon in the line having test condition, such as</p>
+                            <textarea cols="2" rows="1">
+if (y > max) ; // DO NOT do this
+</textarea>
+                            <p><b>Caution</b> - If you put a semicolon after the test condition, the if statement ends
+                                there.
+                                The block or statements following are no more part of if in such cases. Now, let's
+                                discuss nested ifs statement in C++.</p><br><br>
+
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ nested ifs Statement</h2>
+                            <p>A nested if is an if that has another if in its if's body or in its else's body. The
+                                nested if can have one of the following three forms. Here is the first form:</p>
+
+                            <textarea cols="2" rows="15">
+if(expression 1)
+{
+	if(expression 2)
+	{
+		statement 1;
+	}
+	else
+	{
+		statement 2;
+	}
+}
+else
+{
+	body-of-else;
+}
+</textarea>
+
+                            <p>This is the second form of nested ifs statement:</p>
+                            <textarea cols="2" rows="15">
+if(expression 1)
+{
+	body-of-if;
+	else
+	{
+		if(expression 2)
+		{
+			statement 1;
+		}
+		else
+		{
+			statement 2;
+		}
+	}
+}
+</textarea>
+                            <p>Now, this is the third form of nested ifs statement:</p>
+                            <textarea cols="2" rows="15">
+if(expression 1)
+{
+	if(expression 2)
+	{
+		statement 1;
+	}
+	else
+	{
+		statement 2;
+	}
+}
+else
+{
+	if(expression 3)
+	{
+		statement 3;
+	}
+	else
+	{
+		statement 4;
+	}
+}
+</textarea>
+                            <p>In an if statement, either there can be if statement(s) in its body-of-if or in its
+                                body-of-else or in both. The inner ifs can themselves be nested ifs, but the inner if
+                                must terminate before an outer if. Following example programs illustrates the use of
+                                nested ifs</p>
+                            <textarea cols="2" rows="15">
+/* C++ Selection Statements - C++ nested ifs Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int num;
+	cout<<"Enter a number: ";
+	cin>>num;
+	if(num>100)
+	{
+		if(num>500)
+		{
+			if(num>10000)
+			{
+				cout<<"Its too high..!!";
+			}
+			if(num<1000)
+			{
+				cout<<"Its medium..!!";
+			}
+		}
+		if(num<=500)
+		{
+			cout<<"Its low..!!";
+		}
+	}
+	if(num<=100)
+	{
+		cout<<"Its too low..!!";
+	}
+	getch();
+}
+</textarea>
+                            <p>Here are the sample runs of the above C++ program:</p>
+
+                            <img src="img/lesson8.8.jpg" alt="" width="70%" draggable="false"><br><br>
+                            <img src="img/lesson8.9.jpg" alt="" width="70%" draggable="false">
+                            <br><br><br>
+
+
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ switch Statement</h2>
+                            <p>C++ provides a multiple-branch selection statement known as switch. This selection
+                                statement successively tests the value of an expression against a list of integer or
+                                character constants. When a match is found, the statements associated with that constant
+                                are executed. The syntax of switch statement is as follows:</p>
+                            <textarea cols="2" rows="15">
+    switch(expression)
+    {
+        case constant1 : statement sequence 1;
+                break;
+        case constant2 : statement sequence 2;
+                break;
+        case constant3 : statement sequence 3;
+                break;
+        .
+        .
+        .
+        case constant n-1 : statement sequence n-1;
+                break;
+        default : statement sequence n;
+    }
+</textarea>
+                            <p>The expression is evaluated and its values are matched against the values of the
+                                constants specified in the case statements. When a match is found, the statement
+                                sequence associated with that case is executed until the break statement or the end of
+                                switch statement is reached. If a case statement does not include a break statement,
+                                then the control continues right on the next case statement(s) until either a break is
+                                encountered or end of switch is reached. This situation (i.e., missing break in case
+                                statement) is called fall through. The default statement gets executed when no match is
+                                found. The default statement is optional and, if it is missing , no action takes place
+                                if all matches fail. <br><br>
+
+                                The ANSI standard specifies that a switch can have upto 257 case statements, however,
+                                you must always limit the number of case statements to a smaller amount for the sake of
+                                efficiency.<br><br>
+
+                                Following example illustrates the use of switch statement. This program ask to the user
+                                to input number of week's day (1-7) and translate to its equivalent name of the day of
+                                the week (e.g., 1 to Sunday, 2 to Monday, ...., 7 to Saturday).
+                            </p>
+                            <textarea cols="2" rows="15">
+    /* C++ Selection Statement - C++ switch Statement */
+
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int dow;
+	cout<<"Enter number of week's day (1-7): ";
+	cin>>dow;
+	switch(dow)
+	{
+		case 1 : cout<<"\nSunday";
+			break;
+		case 2 : cout<<"\nMonday";
+			break;
+		case 3 : cout<<"\nTuesday";
+			break;
+		case 4 : cout<<"\nWednesday";
+			break;
+		case 5 : cout<<"\nThursday";
+			break;
+		case 6 : cout<<"\nFriday";
+			break;
+		case 7 : cout<<"\nSaturday";
+			break;
+		default : cout<<"\nWrong number of day";
+			break;
+	}
+	getch();
+}
+</textarea>
+                            <p>When the above program is compile and executed, it will produce the following output:</p>
+                            <img src="img/8.10.jpg" alt="" width="70%" draggable="false"><br><br>
+                            <img src="img/8.11.jpg" alt="" width="70%" draggable="false">
+
+                            <br><br><br>
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">switch Vs if-else</h2>
+                            <p>The switch and if-else both are selection statements and they both let you select an
+                                alternative out of given many alternatives by testing an expression. However, there are
+                                some differences in their operations. These are given below:</p>
+
+                            <p>
+                                • The switch statement differs from the if statement in that switch can only test for
+                                equality whereas if can evaluate a relational or logical expression i.e., multiple
+                                conditions.<br>
+                                • The switch statement selects its branches by testing the value of same variable
+                                (against a set of constants) whereas the if-else construction lets you use a series of
+                                expressions that may involve unrelated variables and complex expressions.<br>
+                                • The if-else is more versatile of the two statements. For example, if-else can handle
+                                ranges whereas switch cannot. Each switch case label must be a single value.<br>
+                                • The if-else statement can handle floating-point tests also apart from handling integer
+                                and character tests whereas a switch cannot handle floating-point tests. The case labels
+                                of switch must be an integer (which includes char also).<br>
+                                • The switch case label value must be a constant. So, if two or more variables are to be
+                                compared, use if-else.<br>
+                                • The switch statement is more efficient choice in terms of code used in a situation
+                                that supports the nature of switch operation (testing a value against a set of
+                                constants).<br>
+                            </p><br><br><br>
+
+
+
+
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">C++ Nested-Switch</h2>
+                            <p>Like if statements, a switch can also be nested. There can be a switch as part of the
+                                statement sequence of another switch. For example, the following code fragment is
+                                perfectly all right in C++</p>
+
+                            <textarea cols="2" rows="15">
+   switch(a)
+{
+  case 1 : switch(b)
+		    {
+			 case 0 : cout << "Divide by zero-Error !!" ;
+					  	break;
+			  case 1 : res = a/b ;
+			}
+			break;
+  case 2 :
+	   :
+}
+}
+</textarea>
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Some important Things to know about
+                                switch</h2>
+                            <p>There are some important things that you must know about the switch statement :</p>
+
+                            <p>
+                                • A switch statement can only work for equality comparisons.<br>
+                                • TNo two case labels in the same switch can have identical values. But, in case of
+                                nested switch statements the case constants of the inner and outer switch can contains
+                                common values.<br>
+                                • If character constants are used in the switch statement, they are automatically
+                                converted to their integers (i.e., their equivalent ASCII codes).<br>
+                                • The switch statement is more efficient than if in a situation that supports the nature
+                                of switch operation.<br>
+                               </p>
+
+                            
+                            <p>
+                            <b>Tip </b>- A switch statement is more efficient than nested if-else statement.<br>
+                            <b>Tip </b>- Always put a break statement after the last case statement in a switch.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js">
+    </script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>

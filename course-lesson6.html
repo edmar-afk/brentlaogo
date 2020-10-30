@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Programming 1</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-chalkboard-teacher fa-2x"></i></div>
+                <h1 class="text-center">IT102</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            Lessons
+                        </a></li>
+                    <li class="tm-nav-item"><a href="overview.html" class="tm-nav-link">
+                            <i class="fas fa-book-open"></i>
+                            Overview
+                        </a></li>
+                </ul>
+            </nav>
+
+            <p class="tm-mb-80 pr-5 text-white">
+                This course covers the use of general purpose programming language to solve problems. The emphasis is to
+                train the students to design,
+                implement, and test and debug programs intended to solve computing problems using fundamental
+                programming constructs.
+                This will be introduces to students with no previous programming experience on how to plan and create
+                well-structured programs using
+                procedural programming paradigms.. </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/programming1.png" width="100%" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Comparing Datatypes</h2>
+                        <p>source <a href="https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm">Tutorials
+                                point</a>
+                            </p>
+                            <p class="tm-pt-30">
+                                <p>
+                                    While writing program in any language, you need to use various variables to store
+                                    various information. Variables are nothing but reserved memory locations to store
+                                    values. This means that when you create a variable you reserve some space in memory.
+
+                                    You may like to store information of various data types like character, wide
+                                    character, integer, floating point, double floating point, boolean etc. Based on the
+                                    data type of a variable, the operating system allocates memory and decides what can
+                                    be stored in the reserved memory.
+                                </p><br>
+
+                            </p>
+
+                            <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Primitive Built-in Types</h2>
+                            <hr class="tm-hr-primary tm-mb-55">
+                            <p>C++ offers the programmer a rich assortment of built-in as well as user defined data
+                                types. Following table lists down seven basic C++ data types −</p>
+
+                            <img src="img/lesson6.1.png" alt="" width="100%" draggable="false">
+
+                            <p>Several of the basic types can be modified using one or more of these type modifiers
+                                −<br>
+
+                                • <b>signed</b><br>
+                                • <b>unsigned</b><br>
+                                • <b>short</b><br>
+                                • <b>long</b><br>
+                            </p>
+
+                            <img src="img/lesson6.2.png" alt="" width="100%" draggable="false">
+
+
+                            <p>The size of variables might be different from those shown in the above table, depending
+                                on the compiler and the computer you are using.
+                                <br><Br>
+                                Following is the example, which will produce correct size of various data types on your
+                                computer.
+                                <br><br>
+                                <textarea cols="2" rows="15">
+#include <iostream>
+using namespace std;
+
+int main() {
+   cout << "Size of char : " << sizeof(char) << endl;
+   cout << "Size of int : " << sizeof(int) << endl;
+   cout << "Size of short int : " << sizeof(short int) << endl;
+   cout << "Size of long int : " << sizeof(long int) << endl;
+   cout << "Size of float : " << sizeof(float) << endl;
+   cout << "Size of double : " << sizeof(double) << endl;
+   cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;
+   
+   return 0;
+}
+                        </textarea>
+
+                                <p>This example uses <b>endl</b>, which inserts a new-line character after every line
+                                    and << operator is being used to pass multiple values out to the screen. We are also
+                                        using <b>sizeof()</b> operator to get size of various data types.
+                                        <br><br>
+                                        When the above code is compiled and executed, it produces the following
+                                        result which can vary from machine to machine −</p>
+
+                                <textarea cols="2" rows="8">
+Size of char : 1
+Size of int : 4
+Size of short int : 2
+Size of long int : 4
+Size of float : 4
+Size of double : 8
+Size of wchar_t : 4
+                        </textarea><br><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">typedef Declarations</h2>
+                                <hr class="tm-hr-primary tm-mb-55">
+                                <p>You can create a new name for an existing type using typedef. Following is the simple
+                                    syntax to define a new type using typedef −</p>
+                                <textarea cols="2" rows="1">
+typedef type newname; 
+                        </textarea>
+                                <p>For example, the following tells the compiler that feet is another name for int −</p>
+                                <textarea cols="2" rows="1">
+typedef int feet; 
+                        </textarea>
+                                <p>Now, the following declaration is perfectly legal and creates an integer variable
+                                    called distance −</p>
+                                <textarea cols="2" rows="1">
+feet distance; 
+                        </textarea><br><br>
+
+                                <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Enumerated Types</h2>
+                                <hr class="tm-hr-primary tm-mb-55">
+                                <p>An enumerated type declares an optional type name and a set of zero or more
+                                    identifiers that can be used as values of the type. Each enumerator is a constant
+                                    whose type is the enumeration.<br><br> Creating an enumeration requires the use of
+                                    the keyword <b>enum</b>. The general form of an enumeration type is −</p>
+                                <textarea cols="2" rows="2">
+enum enum-name { list of names } var-list; 
+                        </textarea>
+                                <p>Here, the enum-name is the enumeration's type name. The list of names is comma
+                                    separated.
+                                    <br><br>
+                                    For example, the following code defines an enumeration of colors called colors and
+                                    the variable c of type color. Finally, c is assigned the value "blue".</p>
+
+                                <textarea cols="2" rows="2">
+enum color { red, green, blue } c;
+c = blue; 
+                        </textarea>
+                                <p>By default, the value of the first name is 0, the second name has the value 1, and
+                                    the third has the value 2, and so on. But you can give a name, a specific value by
+                                    adding an initializer. For example, in the following enumeration, <b>green</b> will have
+                                    the value 5.
+                                </p>
+                        <textarea cols="2" rows="2">
+enum color { red, green = 5, blue }; 
+                        </textarea>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js">
+    </script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>

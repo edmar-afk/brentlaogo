@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Programming 1</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-chalkboard-teacher fa-2x"></i></div>
+                <h1 class="text-center">IT102</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            Lessons
+                        </a></li>
+                    <li class="tm-nav-item"><a href="overview.html" class="tm-nav-link">
+                            <i class="fas fa-book-open"></i>
+                            Overview
+                        </a></li>
+                </ul>
+            </nav>
+
+            <p class="tm-mb-80 pr-5 text-white">
+                This course covers the use of general purpose programming language to solve problems. The emphasis is to
+                train the students to design,
+                implement, and test and debug programs intended to solve computing problems using fundamental
+                programming constructs.
+                This will be introduces to students with no previous programming experience on how to plan and create
+                well-structured programs using
+                procedural programming paradigms.. </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row tm-mb-45">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <img src="img/programming1.png" width="100%" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="row tm-row tm-mb-40">
+                <div class="col-12">
+                    <div class="mb-4">
+                        <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Create Simple Programs</h2>
+                        <p>Source:<a href="https://www.wikihow.com/Create-a-Simple-Program-in-C%2B%2B">Wikihow</a></p>
+                        <p class="tm-pt-30">
+                            <p>
+                                Ever wanted to program in C++? The best way to learn is by looking at examples. Take a
+                                look at the basic C++ programming outline to learn about the structure of a C++ program,
+                                then create a simple program on your own.
+                            </p><br><br><br>
+
+                        </p>
+
+                        <h1 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Steps</h1>
+                        <hr class="tm-hr-primary">
+                        <br><br><br>
+                        <h3 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Step 1</h3>
+                        <p><b style="color:rgba(81, 255, 0, 0.979);">Get a compiler and/or IDE.</b> Three good choices
+                            are
+                            GCC, or if your computer is running Windows, Visual Studio Express Edition or Dev-C++.</p>
+                        <br><br>
+
+                        <h3 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Step 2</h3>
+                        <p><b style="color:rgba(81, 255, 0, 0.979);">Try some example programs.</b>Copy and paste the
+                            following into a text/code editor:
+                            A simple program is given by <b style="color:rgba(81, 255, 0, 0.979);">Bjarne Stroustrup</b>
+                            (developer of C++) to check your compiler:</p>
+
+                        <textarea cols="2" rows="10" />
+                        #include <iostream>
+#include <string> 
+using namespace std; 
+int main () 
+{
+    string s;
+    cout << "Your Name \n";
+    cin  >> s;
+    cout << "Hello, " << s << '\n' ;
+    return 0;
+}</textarea>
+
+                        <p>A program for finding the sum of two numbers:</p>
+                        <textarea cols="2" rows="10" />
+                        #include <iostream>
+using namespace std; 
+int main () 
+{
+    int no1, no2, sum; 
+    cout << "\nEnter the first number = " ; 
+    cin  >> no1 ;
+    cout << "\nEnter the second number = " ;
+    cin  >> no2 ; 
+    sum = no1 + no2 ;
+    cout << "\nThe sum of "<< no1 <<" and "<< no2 <<" = "<< sum <<'\n' ;
+    return 0 ;
+}</textarea>
+
+                        <p>A program for finding the product in multiplication problems:</p>
+                        <textarea cols="2" rows="10" />
+                        #include <iostream>
+int main()
+{
+    int v1, v2, range;
+    std::cout <<"Please input two numbers:"<< std::endl;
+    std::cin  >> v1 >> v2;
+    if (v1 <= v2)
+        {
+            range = v2 - v1;
+        } else {
+            range = v1 - v2;	
+                }
+        std::cout << "range = " << range << std::endl;
+        return 0;
+}</textarea>
+
+                        <p>A program for finding the value of exponents:</p>
+                        <textarea cols="2" rows="10" />
+                        #include <iostream>
+using namespace std;
+int main()
+{
+    int value, pow, result=1;
+    cout << "Please enter operand:" << endl;
+    cin  >> value; #cout << "Please enter exponent:" << endl;
+    cin  >> pow;
+    for (int cnt=0; cnt!=pow; cnt++)
+    result*=value;
+    cout << value << " to the power of " << pow << " is: " << result << endl;
+    return 0;
+}</textarea><br><br><br>
+
+                        <h3 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Step 3</h3>
+                        <p><b style="color:rgba(81, 255, 0, 0.979);">Save this as a .cpp file with a name that
+                                accurately reflects your program.</b>Don't confuse there are many other extensions for
+                            C++ files, choose any of them (like *.cc, *.cxx, *.c++, *.cp) .
+                            It should say Save as Type: {select "All Files"}</p><br><br>
+
+                        <h3 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Step 4</h3>
+                        <p><b style="color:rgba(81, 255, 0, 0.979);">Compile it.</b>For users of linux and gcc compiler,
+                            use <b style="color:rgba(81, 255, 0, 0.979);">Command : g++ sum.cpp.</b> Users of Window can
+                            use any C++ compiler, such as <b style="color:rgba(81, 255, 0, 0.979);">MS Visual
+                                C++,Dev-C++</b> or any other preferred program.</p>
+
+                        <img src="img/lesson4.jpg" alt="" width="100%"><br><br><br>
+
+                        <h3 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">Step 5</h3>
+                        <p><b style="color:rgba(81, 255, 0, 0.979);">Run Program.</b>For users of Linux and gcc compiler
+                            Command : <b style="color:rgba(81, 255, 0, 0.979);">./a.out</b> (a.out is an executable file produce by compiler after compilation of
+                            program.)
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>
